@@ -1,2 +1,7 @@
-export { default as Jdb } from "./Jdb";
-export { default as Collection } from "./Collection";
+const Jdb =require('./Jdb');
+const Collection =require('./Collection');
+
+module.exports = {
+    Jdb,
+    Collection
+}
