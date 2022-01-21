@@ -1,0 +1,32 @@
+{
+  "name": "json-db",
+  "version": "0.1.0",
+  "description": "Simple to use local JSON database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test specified\"",
+    "start" : "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/midhunz/json-db.git"
+  },
+  "keywords": [
+    "json",
+    "db",
+    "json-db",
+    "simple-json-db",
+    "embedded-db",
+    "simple-db"
+  ],
+  "author": "midhun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/midhunz/json-db/issues"
+  },
+  "homepage": "https://github.com/midhunz/json-db#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "nanoid": "^3.2.0"
+  }
+}
