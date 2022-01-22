@@ -3,3 +3,4 @@ package-lock.json
 db
 .DS_Store
 app.js
+todo.txt
