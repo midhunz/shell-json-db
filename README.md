@@ -93,7 +93,7 @@ Syntax
 
 Example 
 ```
-    users.save({name:'John'})
+    users.find({name:'John'})
 
     {
         _id:'TB1gd6-DbOM6lpg4YG8oJ'
@@ -103,10 +103,30 @@ Example
 
 Note : Currently, Find() does not support complex or multiple conditions. It only supports searching a single field.
 
-users.delete({_id:'id'})
+__Update__
 
+With the save() method, you can update a JSON object that satisfies a condition.
+Does not support complex or multiple conditions. It only supports searching a single field.
+
+```
+    users.save({
+        _id:'TB1gd6-DbOM6lpg4YG8oJ'
+        name:'Jack'
+    })
+```
+
+__Delete one__
+
+Use the delete() method to remove a single object from a collection that satisfies a condition. If more than one satisfies,
+delete only one.
+```
+users.delete({_id:'TB1gd6-DbOM6lpg4YG8oJ'})
+```
+__Delete All__
+
+```
 users.deleteAll()
-
+```
 
 ## Limits
 
