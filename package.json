@@ -1,7 +1,7 @@
 {
-  "name": "cova-json-db",
-  "version": "0.1.1",
-  "description": "Simple to use local JSON database",
+  "name": "shell-json-db",
+  "version": "0.1.5",
+  "description": "Simple to use JSON database",
   "main": "index.js",
   "scripts": {
     "test": "echo \"No test specified\"",
@@ -17,7 +17,11 @@
     "json-db",
     "simple-json-db",
     "embedded-db",
-    "simple-db"
+    "simple-db",
+    "embed",
+    "embedded",
+    "flat",
+    "JSON"
   ],
   "author": "midhun",
   "license": "MIT",
