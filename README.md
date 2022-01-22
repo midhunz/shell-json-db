@@ -43,13 +43,46 @@ users.save({});
 
 ## Methods
 
-const users=db.createCollection('users');
+__Create DB__
+
+Shell DB must be created before working with it. For that use the __Constructor__ method with the database name.
+```
+    const db=new Jdb('db_name','path')
+```
+This will create a directory with the database name in the path given, path is not mandatory by default, will create the same place
+
+__Create Collection__
+
+Collections are groups of JSON Objects. The objects within a collection may have different fields. In a relational database system, a collection is equivalent to a table. It exists within the database.
+
+```
+    const users=db.createCollection('users');
+```
+
+When creating a collection, if there are no objects to save, then the files should be created only if an insert happens
+
+__save()__  method allows you to insert one or more document into a collection.
+
+```
+    collection.save({name:'John'})
+
+```
+
+example 
+
+```
+    const users=db.createCollection('users');
+    users.save({name:'John'})
+```
+
+One object will be saved inside the collection after running save() ,ShellDB will add the _id field and generate a unique identifier for it before inserting.
+
 
 users.find()
 
 find method used to fetch 
 
-__users.save()__  method allows you to insert one or more document into a collection.
+
 
 users.delete({_id:'id'})
 
