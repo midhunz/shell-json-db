@@ -68,7 +68,7 @@ __save()__  method allows you to insert one or more document into a collection.
 
 ```
 
-example 
+example
 
 ```
     const users=db.createCollection('users');
@@ -77,12 +77,31 @@ example
 
 One object will be saved inside the collection after running save() ,ShellDB will add the _id field and generate a unique identifier for it before inserting.
 
+Insert many
 
-users.find()
+```
+    users.save([{name:'John'},{name:'Mary'}])
+```
+__find()__
 
-find method used to fetch 
+The __find()__ method searches for JSON Objects that satisfy a given condition and returns the matching documents.
 
 
+Syntax
+
+    collection.find({})
+
+Example 
+```
+    users.save({name:'John'})
+
+    {
+        _id:'TB1gd6-DbOM6lpg4YG8oJ'
+        name:'john'
+    }
+```
+
+Note : Currently, Find() does not support complex or multiple conditions. It only supports searching a single field.
 
 users.delete({_id:'id'})
 
