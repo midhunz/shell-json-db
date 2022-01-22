@@ -1,6 +1,6 @@
 {
   "name": "shell-json-db",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "Simple to use JSON database",
   "main": "index.js",
   "scripts": {

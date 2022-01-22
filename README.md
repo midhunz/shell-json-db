@@ -1,7 +1,10 @@
 # 🐚 Shell DB  
 
-> Simple to use JSON database  🐚
+> ShellDB is a simple and easy-to-use JSON database 🐚
 
+ShellDB is a simple and easy-to-use JSON database. If you are looking for a lightweight database that needs zero configuration and is flexible and fast, ShellDB is definitely the solution. Supports basic CURD queries.
+
+ShellDB handles storing and retrieving data between JSON and a Javascript array of objects. 
 
 ```
 //Create Databse
@@ -38,8 +41,6 @@ const users=db.createCollection('users');
 users.save({});
 
 ```
-## API
-
 
 ## Methods
 
