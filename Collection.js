@@ -1,6 +1,7 @@
 const fs = require('fs')
 const fileAdapter = require('./fileAdapter')
 const { nanoid } = require('nanoid')
+const { count } = require('console')
 
 class Collection {
   #_p
@@ -26,6 +27,7 @@ class Collection {
 
   save(field) {
     let d = this.find()
+    const r = []
     if (!d) d = [];
     if (Array.isArray(field) && field.length > 0) {
       for (const e of field) {
@@ -36,6 +38,7 @@ class Collection {
           e._id = nanoid();
           d.push(e)
         }
+        r.push(e);
       }
     } else {
       if (field._id) {
@@ -45,22 +48,31 @@ class Collection {
         field._id = nanoid()
         d.push(field)
       }
+      r.push(field);
     }
     fileAdapter.write(this.#_p, d)
+    return r;
   }
 
   delete(_id) {
     let d = this.find()
+    const count = d.length;
     if (d) {
       d = d.filter((e) => !(e._id === _id))
-
       fileAdapter.write(this.collection, d)
+    }
+    return {
+      count
     }
   }
 
   deleteAll() {
     let d = this.find()
-    d ? fileAdapter.write(this.collection, d) : null
+    const count = d.length;
+    d ? fileAdapter.write(this.collection, []) : null
+    return {
+      count
+    }
   }
 }
 
